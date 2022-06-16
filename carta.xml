@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<carta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/usuario/Downloads/python%20xml/carta.xsd">
+
+   <remitente> 
+      <nombre> Nombre del remitente </nombre>
+      <apellidos>apellidos del remitente </apellidos>
+    </remitente>
+    <destinatario direccion="" provincia="provincia" localidad="localidad" codigo_postal="localidad">
+        <nombre> Nombre del remitente </nombre>
+        <apellidos> apellidos del remitente </apellidos>
+    </destinatario>
+       <cuerpo> 
+            <saludo> Hola  </saludo>
+            <parrafo>  Lorem ipsum</parrafo>
+            <firma> remitente </firma>
+            <post_data>  gracias</post_data>
+       </cuerpo>
+
+</carta>

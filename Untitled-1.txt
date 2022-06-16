@@ -1,0 +1,7 @@
+$x('//div[@class="elementor-widget-container"]/p/text()').map(x => x.wholeText)
+r= request.get(url_xml)
+print(r.status_code)
+
+home = r.content.decode('utf-8')
+
+parser  = html.fromstring(home)

@@ -1,0 +1,35 @@
+#libreias usadas
+lxml
+xmltodict
+
+#libreias otras
+EasyXSD
+pyxsd 
+minixsv 
+XSV 
+
+
+#ejemplos
+from lxml import etree
+
+dtd = etree.DTD(StringIO("""<!ELEMENT foo EMPTY>"""))
+root = etree.XML("<foo/>")
+print(dtd.validate(root))
+# True
+
+root = etree.XML("<foo>bar</foo>")
+print(dtd.validate(root))
+# False
+print(dtd.error_log.filter_from_errors())
+# <string>:1:0:ERROR:VALID:DTD_NOT_EMPTY: Element foo was declared EMPTY this one has content
+
+
+from easyxsd import *
+>>> xsd = xsd_from_file('/path/to/files/definitions.xsd')
+>>> xml = xml_from_file('/path/to/files/valid-example.xml')
+>>> xsd.validate(xml)
+True
+>>> xml = xml_from_file('/path/to/files/invalid-example.xml')
+>>> xsd.validate(xml)
+False
+
